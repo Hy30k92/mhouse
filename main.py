@@ -15,3 +15,7 @@ app.include_router(mh_router, prefix='/mh')
 @app.get("/", response_class=HTMLResponse)
 async def index(req: Request):
     return templates.TemplateResponse('index.html', {'request': req})
+
+@app.get("/semi", response_class=HTMLResponse)
+async def semi(req: Request):
+    return templates.TemplateResponse('/html/semi', {'request': req})

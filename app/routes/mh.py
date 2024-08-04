@@ -10,3 +10,7 @@ templates = Jinja2Templates(directory='views/templates')
 @mh_router.get("/mh", response_class=HTMLResponse)
 async def mh(req: Request):
     return templates.TemplateResponse('min/mh.html', {'request': req})
+
+@mh_router.get("/semi", response_class=HTMLResponse)
+async def semi(req: Request):
+    return templates.TemplateResponse('min/semi.html', {'request': req})
